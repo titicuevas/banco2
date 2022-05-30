@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Cliente extends Model
 {
     use HasFactory;
+
+    protected $table = 'clientes';
+
+    protected $fillable = [
+        'dni',
+        'nombre',
+    ];
+
+    public function cuentas (){
+        return $this ->belongsToMany(Cuenta::class,'titulares');
+    }
 }
