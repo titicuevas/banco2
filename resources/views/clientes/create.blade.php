@@ -10,7 +10,7 @@
 @method('post')
 
 <label for="dni">DNI</label>
-<input type="text" name="dni" placeholder="Escriba su DNI"  id="dni" value="{{old('dni',$clientes->dni)}}">
+<input type="text" name="dni" placeholder="Escriba su DNI"  id="dni" value="{{old('dni',$cliente->dni)}}">
 @error('dni')
     <p class="text-red-500 text-sm mt-1">
         {{ $message }}
@@ -18,7 +18,7 @@
   @enderror
   <br>
   <label for="nombre">Nombre</label>
-<input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre"  value="{{old('nombre',$clientes->nombre)}}">
+<input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre"  value="{{old('nombre',$cliente->nombre)}}">
 @error('nombre')
     <p class="text-red-500 text-sm mt-1">
         {{ $message }}

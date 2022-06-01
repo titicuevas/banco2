@@ -31,6 +31,7 @@ class ClienteController extends Controller
     {
         $cliente = new Cliente();
         return view ('clientes.create',['cliente'=>$cliente]);
+
     }
 
     /**
@@ -41,6 +42,7 @@ class ClienteController extends Controller
      */
     public function store(StoreClienteRequest $request)
     {
+
        $cliente = new Cliente($request->validated());
 
         $cliente ->save();

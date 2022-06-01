@@ -24,7 +24,7 @@ class StoreClienteRequest extends FormRequest
     public function rules()
     {
         return [
-            'dni'=> 'required|unique:clientes|regex:/^\d{8}[a-zA-Z]$/',
+            'dni'=> 'required|unique:clientes|regex:/^\d{8}[A-Z]$/',
             'nombre'=> 'required|string',
         ];
     }
